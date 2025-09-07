@@ -26,7 +26,7 @@ if (form) {
                 status.textContent = "Thanks! I’ll get back to you.";
                 form.reset();
             } else {
-                status.textContent = "There was a problem. Try the email link below.";
+                status.textContent = "There was a problem - try the email link below.";
             }
         } catch (err) {
             status.textContent = "Network error. Try the email link below.";
