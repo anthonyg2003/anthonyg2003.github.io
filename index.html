@@ -1,23 +1,87 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anthony Guillen</title>
+<meta name="description" content="Personal site of Anthony Guillen — projects, contact, and links." />
+<meta property="og:title" content="Anthony Guillen" />
+<meta property="og:description" content="Projects, contact, and links." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/assets/favicon.svg" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+<header class="site-header">
+<a class="brand" href="/">AG</a>
+<nav class="nav">
+<a href="#about">About</a>
+<a href="/projects/">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<main>
+<section class="hero">
+<img class="avatar" src="/assets/profile.jpg" alt="Photo of Anthony Guillen" />
+<div>
+<h1>Hi, I'm Anthony.</h1>
+<p>I build practical systems for docs, data, and operations. Some projects may be commercial soon; most are private while in development.</p>
+<p><a class="button" href="/projects/">See projects</a></p>
 </div>
+</section>
+
+
+<section id="about" class="card">
+<h2>About</h2>
+<p>Supply chain & operations leader. Founder at Clover Basin Animal Hospital. I like turning messy workflows into clear, automated ones. Based in Colorado.</p>
+</section>
+
+
+<section class="card">
+<h2>Highlights</h2>
+<ul class="list">
+<li>Document ingestion + search tools (private repos).</li>
+<li>Data sync pipelines to cloud warehouses.</li>
+<li>Lightweight apps for day‑to‑day business ops.</li>
+</ul>
+</section>
+
+
+<section id="contact" class="card">
+<h2>Contact</h2>
+<p>Use the form—your email stays private.</p>
+<form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOURS" method="POST">
+<label>
+Your name
+<input name="name" type="text" required />
+</label>
+<label>
+Your email
+<input name="email" type="email" required />
+</label>
+<label>
+Message
+<textarea name="message" rows="5" required></textarea>
+</label>
+<input type="hidden" name="_subject" value="New message from anthonyg2003.github.io" />
+<button type="submit">Send</button>
+<p class="form-status" aria-live="polite"></p>
+</form>
+<details class="alt-contact">
+<summary>No forms? Use a mail link.</summary>
+<p><a href="mailto:contact@anthonyg2003.com?subject=Hello%20Anthony">Email me</a></p>
+</details>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<small>© <span id="year"></span> Anthony Guillen</small>
+</footer>
+
+
+<script src="/assets/script.js" defer></script>
+</body>
+</html>
